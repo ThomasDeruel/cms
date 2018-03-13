@@ -1,11 +1,12 @@
 <?php
-include'include/header.php'
+include 'include/header.php';
+
  ?>
-  <h1 class="container_title">Index</h1>
+  <h1 class="container_title"><?= $page['title']?></h1>
   <div class="container_content">
   </div>
-  <img class="content-bg"src="img/background-wow-repeat.jpg" alt="bg">
+  <img class="content-bg"src="<?= $page['imgSrc']?>" alt="bg">
 
   <?php
-  include'include/footer.php'
+  include 'include/footer.php';
   ?>

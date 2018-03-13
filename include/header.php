@@ -1,3 +1,8 @@
+<?php
+require_once "content.php";
+require_once "active.php";
+require_once "page.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +16,12 @@
 <body>
 <div class="header">
 <div class="header_nav_container">
-  <a href="index.php" class="lol logo">SX</a>
+  <?=addActive('index.php', "Index")?>
 <nav class="header_nav">
   <ul class="ul">
-    <?php
-    include'active.php'
-    ?>
-    <li <?=active("horde.php") ?>><a href="horde.php" class="link_nav">Horde</a></li>
-    <li <?=active("alliance.php") ?>><a href="alliance.php" class="link_nav">Alliance</a></li>
-    <li <?=active("pvp.php") ?>><a href="pvp.php" class="link_nav">The battle</a></li>
+  <?=addActive('horde.php', "Horde")?>
+  <?=addActive('alliance.php', 'Alliance')?>
+  <?=addActive('pvp.php', 'Pvp')?>
   </ul>
 </nav>
 </div>
